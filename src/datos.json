@@ -1,0 +1,119 @@
+{
+    "header": {
+        "nombre": "MyCompany",
+        "links":[
+            {
+                "texto": "Blog",
+                "url": "#"
+            },
+            {
+                "texto": "YouTube",
+                "url": "#"
+            }
+        ]
+    },
+    "carrusel": [
+            {
+            "texto": "Si aún no te diste cuenta",
+            "url":  "/carousel1.png",
+            "alt":  "Si aún no te diste cuenta"
+            },
+            {
+                "texto": "esta explosión",
+                "url":  "/carousel2.png",
+                "alt":  "esta explosion"
+            },
+            {
+                "texto": "llego para quedarse",
+                "url":  "/carousel3.png",
+                "alt":  "llego para quedarse"
+            }
+        ],
+    "footer": 
+        [
+            {
+                "titulo": "Social",
+                "links": [
+                    {
+                        "titulo": "Twitter/X",
+                        "url": "#"
+                    }, 
+                    {
+                        "titulo": "LinkedIn",
+                        "url": "#"
+                    },
+                    {
+                        "titulo": "Discord",
+                        "url": "#"
+                    },
+                    {
+                        "titulo": "Telegram",
+                        "url": "#"
+                    }
+                ]
+            },  {
+                "titulo": "Help",
+                "links": [
+                    {
+                        "titulo": "Contacto",
+                        "url": "#"
+                    }, 
+                    {
+                        "titulo": "Email",
+                        "url": "#"
+                    },
+                    {
+                        "titulo": "Preguntas Frecuentes (FAQ)",
+                        "url": "#"
+                    },
+                    {
+                        "titulo": "Documentación Técnica",
+                        "url": "#"
+                    }
+                ]
+            }
+        ],
+"prices": 
+        [
+            {
+                "titulo": " Opción Free",
+                "icono":  "🚀",
+                "precio": "$0/mes",
+                "textButton": "Registro en Free",
+                "features": [
+                        "Asesoría hasta 5 usuarios",
+                        "Acceso a documentación y tutoriales básicos",
+                        "Consultoría inicial de 30 minutos",
+                        "Noticias y tendencias Web3 (newsletter mensual)",
+                        "Soporte por correo electrónico"
+                ]
+            },
+            {
+                "titulo": " Opción Pro",
+                "icono":  "🔥",
+                "precio": "$29/mes",
+                "textButton": "Registro en Pro",
+                "features": [
+                        "Asesoría hasta 15 usuarios",
+                        "Desarrollo básico de smart contracts (hasta 2 por mes)",
+                        "Integración con billeteras Web3",
+                        "Revisión de código con mejores prácticas",
+                        "Soporte prioritario por correo y chat"
+                ]
+            },
+            {
+                "titulo": " Opción Enterprise",
+                "icono":  "💎",
+                "precio": "$99/mes",
+                "textButton": "Registro en Enterprise",
+                "features": [
+                        "Asesoría hasta 50 usuarios",
+                        "Desarrollo avanzado de smart contracts y DApps",
+                        "Integración con plataformas DeFi y NFT",
+                        "Auditoría de seguridad para smart contracts",
+                        "Soporte 24/7 y reuniones personalizadas"
+                ]
+            }
+        ]
+       
+}
