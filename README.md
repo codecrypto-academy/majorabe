@@ -1,3 +1,29 @@
+# Faucet Service
+
+Este es un servicio que permite a los usuarios interactuar con una faucet a través de su cuenta MetaMask. Los usuarios pueden solicitar fondos, revisar su balance y hacer transferencias de una cuenta a otra.
+
+## Definición del problema
+
+El objetivo de este proyecto es proporcionar un servicio de faucet que permita a los usuarios obtener fondos, verificar su balance y realizar transferencias entre cuentas mediante la integración con MetaMask.
+
+Las principales características de este servicio son:
+
+- Solicitar fondos desde la faucet.
+- Consultar el balance actual de la cuenta.
+- Realizar transferencias de fondos de una cuenta a otra.
+
+## Funcionalidades
+
+- **Solicitar fondos**: Los usuarios pueden hacer una llamada a la faucet para recibir una asignación de fondos.
+- **Revisar balance**: Los usuarios pueden consultar el saldo disponible en su cuenta.
+- **Transferencias**: Los usuarios pueden transferir fondos entre sus cuentas de forma sencilla.
+
+## Pantallazos
+
+A continuación se presentan algunas capturas de pantalla de la interfaz del servicio:
+
+![Pantallazo 1](front/public/faucet1.png)
+
 
 1️⃣ Crear una nueva cuenta en Geth usando la imagen ethereum/client-go:v1.13.15
 ```bash
