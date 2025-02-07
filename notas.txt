@@ -1,0 +1,62 @@
+Objetivos: 
+Instalar en Docker diferentes bases de datos: MYSQL, SQLSERVER, ORACLE, POSTRGRES
+Cargar datos de la base Northwidn
+Hacer un servidor web que acceda a las distintas bases de datos
+
+---------------------------------------------------------------------------------------
+
+1.Para Mysql
+1.1 Creo el contenedro con Mysql
+docker run --name curso-pg -e POSTGRES_PASSWORD=majo1234 -p 5437:5432 -d postgres:13
+1.2 Corro el script de MYSQL de northwin desde DBeaver para completar la base de datos. 
+usu: root, pass: majo1234 
+1.3 preparo el proyecto en vsc para leer la base
+yarn init -y
+yarn add mysql8
+
+---------------------------------------------------------------------------------------
+
+2. Para Postgresql
+2.1 Creo el contenedor
+docker run --name proyPostgres -e POSTGRES_PASSWORD=Majo1234 -p 5433:5432 -d postgres:13 
+(uso em puerto 5433 para el host porque 5432 estaba en uso)
+2.2 Corro el script de MYSQL de northwin desde DBeaver para completar la base de datos. 
+2.3 preparo el proyecto en vsc para leer la base
+yarn add pg
+
+---------------------------------------------------------------------------------------
+
+3. Para MySqlServer
+3.1 Creo el contenedor 
+docker run --name sqlServer -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=Majo1234" -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-CU15-ubuntu-20.04
+3.2 Corro el scriptde SQLSERVER de northwin desde DBeaver para completar la base de datos. 
+usu: sa, pass: Majo1234 
+3.3 preparo el proyecto en vsc para leer la base
+yarn add mssql
+
+-----------------------------------------------------------------------------------------
+
+4. Para Oracle
+4.1 Creo el contenedor 
+docker run -d --name oracle -e ORACLE_PWD=majo1234 -p 1521:1521 container-registry.oracle.com/database/express:21.3.0-xe
+
+4.2 Para conectar en DBeaver usar los siguientes parametros. 
+Host: localhost, Port:1521
+Database: XE, Nombre de usurio: SYS, Rol: SYSDBA, Pass: Majo1234 
+
+* Crear un usuario en la base de datos Oracle.
+-- usuario 'c##datos' y  pass 'datos'(prefijo "c##" es obligatorio si la base de datos está configurada en un entorno multitenant)
+CREATE USER c##datos IDENTIFIED BY datos;
+
+-- Otorgar al usuario el rol "DBA" (Database Administrator - debe hacerse con precaución: control total de la bd)
+GRANT dba TO c##datos;
+
+* Se puede duplicar la conexion y ahora configurarla para que acceda con el nuevo usuario con ROL: Normal. 
+Luego con un script creo la base Nothwind y la tabla Customers. 
+
+4.3 Preparo el proyecto en vsc para leer la base
+* Se requiere descargar el cliente de Oracle: https://www.oracle.com/database/technologies/instant-client/winx64-64-downloads.html
+(basta con Basic Light Package). Puede ubicarse en C:\\oracle\\instantclient_23_6 (no es ejecutable, es solo la libreria)
+
+* yarn add oracledb
+--------------------------------------------------------------------------------------------
