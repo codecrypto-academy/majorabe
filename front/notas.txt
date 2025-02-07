@@ -1,0 +1,24 @@
+# Para usar TailWind https://v3.tailwindcss.com/docs/guides/vite
+npm create vite@latest front -- --template react-ts
+npm i 
+npm install -D tailwindcss@3 postcss autoprefixer
+npx tailwindcss init -p
+actualizar (segun recomendacion de la pagina):
+ tailwind.config.js 
+ src/index.css 
+ src/App.tsx
+Para ejecutar la app: npm run dev
+
+# Para usar Shacdcn https://ui.shadcn.com/docs/installation/vite
+agregar contenido a los archivos: tsconfig.json y tsconfig.app.json
+actualizar los tipos de datos usados: npm install -D @types/node
+reemplazo el contenido de vite.config,ts 
+se inicializa: npx shadcn@latest init (actualiza index.css y crea components.json)
+puedo descargar un button (lo crea en la carpeta components) npx shadcn@latest add button
+agrego nuevo codigo en App.tsx para verificar que el button funciona.
+
+algunas lib que usamno.
+npm i react-router-dom
+npx shadcn@latest add form
+npm i ethers
+
