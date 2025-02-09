@@ -1,0 +1,6 @@
+node_modules
+# Ignorar archivos de claves y encriptación
+*.key
+*.pb
+*.des
+*.enc
