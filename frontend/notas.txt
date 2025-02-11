@@ -1,0 +1,17 @@
+1. backend con express
+yarn init -y
+yarn add express
+yarn add web3
+yarn add cors
+
+2. frontend con react-vite
+yarn create vite frontend -template react
+yarn (para que instale las dependencias con las que viene)
+yarn dev
+
+limpiar archivos que no se usen. 
+desde bootstrap traer los estilos y agregarlos al index.html
+
+instalo el router: yarn add react-router-dom
+para manejar formularios de manera eficiente: yarn add react-hook-form
+para acceder api o servidores: yarn add react-query
