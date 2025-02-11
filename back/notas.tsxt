@@ -1,0 +1,2 @@
+crear el conteiner con Mysql8  
+docker run --name proy-carrito-Mysql -p 3307:3306 -e MYSQL_ROOT_PASSWORD=mysecret-pw -d mysql:8.0.28

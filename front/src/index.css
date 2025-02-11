@@ -1,0 +1,34 @@
+/* Aseguramos que el contenedor tenga un margen y ancho uniformes */
+.container {
+  max-width: 1200px;
+  margin: 0 auto; /* Centra el contenido */
+  padding: 0 15px; /* Añade un pequeño padding a los lados */
+}
+
+/* Estilo para los enlaces en el navbar */
+.navbar {
+  display: flex;
+  justify-content: flex-end; /* Alinea los enlaces al final */
+  gap: 20px; /* Añade espacio entre los enlaces */
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  padding: 10px;
+  transition: color 0.3s;
+}
+
+/* Efecto visual para los enlaces */
+.nav-link:hover {
+  color: #007bff; /* Color al pasar el cursor */
+}
+
+/* Estilo para el área de contenido */
+.content {
+  border: 1px solid #ddd;
+  margin-top: 15px;
+  border-radius: 8px; /* Bordes redondeados */
+  background-color: #f9f9f9; /* Color de fondo claro */
+}
