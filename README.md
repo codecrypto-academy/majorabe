@@ -1,6 +1,6 @@
 # Explorer Project
 
-Proyecto de exploracion en la blockachian de Ethereum
+Proyecto de exploracion en la blockchain de Ethereum
  
 
 ## Obejtivos
