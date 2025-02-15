@@ -4,9 +4,9 @@
 
 El objetivo de este proyecto es crear una red privada de Ethereum con múltiples nodos utilizando un mecanismo de consenso Proof of Authority (PoA). 
 Además, se busca:
-✅ Usar Node.js y la librería web3.js para automatizar la configuración y gestión de la red.
-✅ Acceder a la red mediante web3.js, MetaMask y la consola de Geth.
-✅ Implementar GraphQL para consultas sobre la blockchain.
+<br>✅ Usar Node.js y la librería web3.js para automatizar la configuración y gestión de la red.
+<br>✅ Acceder a la red mediante web3.js, MetaMask y la consola de Geth.
+<br>✅ Implementar GraphQL para consultas sobre la blockchain.
 
 ## Pasos para la configuración de la red
 
@@ -59,8 +59,18 @@ geth --datadir nodo2
 --port 30035 
 --bootnodes "enode://959661cfbe54a576eae1b0b9729f480dc53d8450ba163d9ba29a5b723da9dc47882a572d1782e9331cab9dacbab21553a39ac1ff3f4ee183fd584a97f72255df@127.0.0.1:0?discport=30301"
 
-geth --datadir nodo3 --networkid 100517 --ipcpath "\\.\pipe\geth3.ipc" --authrpc.port 8552 --syncmode full --http --http.api "admin,eth,miner,net,txpool,personal" 
---http.port 9547 --allow-insecure-unlock --unlock "0x6bb6917946d5091b01c83468b770259f8658eb7b" --password pwd.txt --port 30036 --bootnodes "enode://959661cfbe54a576eae1b0b9729f480dc53d8450ba163d9ba29a5b723da9dc47882a572d1782e9331cab9dacbab21553a39ac1ff3f4ee183fd584a97f72255df@127.0.0.1:0?discport=30301"
+geth --datadir nodo3 
+--networkid 100517
+--ipcpath "\\.\pipe\geth3.ipc"
+--authrpc.port 8552
+--syncmode full
+--http --http.api "admin,eth,miner,net,txpool,personal" 
+--http.port 9547
+--allow-insecure-unlock
+--unlock "0x6bb6917946d5091b01c83468b770259f8658eb7b"
+--password pwd.txt
+--port 30036
+--bootnodes "enode://959661cfbe54a576eae1b0b9729f480dc53d8450ba163d9ba29a5b723da9dc47882a572d1782e9331cab9dacbab21553a39ac1ff3f4ee183fd584a97f72255df@127.0.0.1:0?discport=30301"
 ```
 📌 Comandos utiles para verificar lo realizado por consola
   
@@ -78,6 +88,17 @@ geth attach http://127.0.0.1:9547
  geth --datadir nodo4 account new --password pwd.txt
  geth --datadir nodo4 init genesis.json
 
- geth --datadir nodo4 --networkid 100517 --ipcpath "\\.\pipe\geth4.ipc" --authrpc.port 8554 --syncmode full --http --http.api "admin,eth,miner,net,txpool,personal" --http.port 9548 --allow-insecure-unlock --unlock "0x5d1b33874e7f345a3bfbe3e1b3370871ce6dc070" --password pwd.txt --port 30037 --bootnodes "enode://959661cfbe54a576eae1b0b9729f480dc53d8450ba163d9ba29a5b723da9dc47882a572d1782e9331cab9dacbab21553a39ac1ff3f4ee183fd584a97f72255df@127.0.0.1:0?discport=30301"
+ geth --datadir nodo4
+--networkid 100517
+--ipcpath "\\.\pipe\geth4.ipc"
+--authrpc.port 8554
+--syncmode full
+--http --http.api "admin,eth,miner,net,txpool,personal"
+--http.port 9548
+--allow-insecure-unlock
+--unlock "0x5d1b33874e7f345a3bfbe3e1b3370871ce6dc070"
+--password pwd.txt
+--port 30037
+--bootnodes "enode://959661cfbe54a576eae1b0b9729f480dc53d8450ba163d9ba29a5b723da9dc47882a572d1782e9331cab9dacbab21553a39ac1ff3f4ee183fd584a97f72255df@127.0.0.1:0?discport=30301"
  ```
 
