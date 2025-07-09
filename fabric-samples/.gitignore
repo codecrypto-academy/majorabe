@@ -1,0 +1,27 @@
+# Archivos generados por el arranque de red
+fabric-samples/test-network/organizations/
+fabric-samples/test-network/system-genesis-block/
+fabric-samples/test-network/channel-artifacts/
+
+# Certificados, claves privadas y materiales sensibles
+*.pem
+*.crt
+*.key
+*.yaml
+*.json
+
+# Archivos de bloque y transacciones
+*.block
+*.tx
+
+# Logs
+*.log
+
+# Configuración generada
+fabric-samples/test-network/connection-*.json
+
+# Binarios (peer, orderer, cryptogen, configtxgen)
+fabric-samples/bin/
+
+# Otros artefactos temporales
+*.tar.gz

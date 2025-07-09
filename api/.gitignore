@@ -1,0 +1,14 @@
+# Node modules
+node_modules/
+
+# Wallets (X.509 credentials)
+wallet/
+
+# Logs
+*.log
+
+# Environment variables
+.env
+
+# Build artifacts (si compilas)
+dist/

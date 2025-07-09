@@ -1,0 +1,34 @@
+# IDE/editor config
+.vscode/
+.idea/
+*.swp
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Node.js
+node_modules/
+
+# Output
+dist/
+build/
+
+# Logs
+*.log
+
+# TypeScript
+*.tsbuildinfo
+
+# Docker
+*.container
+*.image
+
+# Global ignores for all subfolders
+**/node_modules/
+**/dist/
+**/wallet/
+**/*.log
+**/.env
+
+web2/
