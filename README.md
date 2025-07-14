@@ -1,6 +1,8 @@
 # 🧀 Blockchain Láctea - Proyecto de Trazabilidad con Hyperledger Fabric
 
-Este proyecto implementa una cadena de suministro láctea utilizando **Hyperledger Fabric** y **Chaincode-as-a-Service (CCAAS)**. Permite registrar entidades (productores, transportistas, procesadores) y seguir la trazabilidad de los lotes de leche desde el tambo hasta la planta procesadora.
+El proyecto implementa una cadena de suministro láctea basada en Hyperledger Fabric mediante el enfoque Chaincode-as-a-Service (CCAAS).
+Permite registrar entidades clave del ecosistema: productores, transportistas y plantas procesadoras, con posibilidad de incorporar nuevos participantes en futuras fases.
+El objetivo principal es asegurar la trazabilidad de los lotes de leche desde su origen en el tambo hasta su recepción en planta, extendiéndose posteriormente a etapas posteriores de la cadena.
 
 ## 📂 Estructura Relevante del Proyecto
 
@@ -24,7 +26,7 @@ Este proyecto implementa una cadena de suministro láctea utilizando **Hyperledg
 
 # ⚙️ Pasos para ejecutar el sistema 
 
-## 1️⃣ Levantar la red Fabric con canal
+## 1️⃣ Levantar la red Fabric con channel
 Desde la carpeta fabric-samples/test-network:
 ```
 ./network.sh down && docker ps -a && ./network.sh up createChannel -ca -c mychannel
@@ -34,7 +36,7 @@ Desde la carpeta fabric-samples/test-network:
 ```
 ./network.sh -ccn supplychain -ccp ../asset-transfer-basic/chaincode-typescript -ccl typescript
 ```
-Esto lanza los contenedores como se muestra a continuación:
+El despliegue inicia los contenedores necesarios, tal como se observa a continuación:
 ![Contenedores Docker](./screen/pantalla_docker.png)
 
 ## 3️⃣ Iniciar el servidor de CCAAS.
@@ -42,10 +44,10 @@ Esto lanza los contenedores como se muestra a continuación:
 cd chaincode
 ./runChaincodeSupplyChain.sh
 ```
-Este script debe tomar las variables de entorno CORE_CHAINCODE_ID_NAME y CHAINCODE_SERVER_ADDRESS correctamente.
+El script debe utilizar correctamente las variables de entorno CORE_CHAINCODE_ID_NAME y CHAINCODE_SERVER_ADDRESS para habilitar la comunicación con el chaincode.
 
 ## 👤 Preparar identidades de participantes
-En la carpeta api/wallet se almacenarán las identidades X.509.
+Las identidades X.509 de los participantes se almacenan en la carpeta api/wallet.
 
 ### Enrollar la identidad de administrador de la CA
 ```
@@ -55,7 +57,7 @@ node enrollCAAdmin.cjs
 ✅ Resultado esperado:  
 `CA Admin identity enrolled and imported as "ca-admin"`
 
-Esto conecta con la CA (`ca.org1.example.com`) y almacena `ca-admin` en la carpeta `wallet/`.
+La conexión con la autoridad certificadora (ca.org1.example.com) permite registrar y almacenar la identidad ca-admin en la carpeta wallet/.
 
 ### Importar la identidad del Admin de Org1
 ```
@@ -81,10 +83,10 @@ Accesible en: http://localhost:3000
 
 
 ### 💡 Uso de la Interfaz
-Al iniciar sesión como administrador, podrás:
-* Crear perfiles de entidades asociados a direcciones blockchain (wallets)
-*  Visualizar y administrar las entidades activas
-* Seguir el movimiento de lotes de leche a lo largo de la cadena
+Desde la sesión del administrador es posible:
+* Registrar perfiles de entidades vinculados a direcciones blockchain (wallets)
+* Consultar y gestionar las entidades activas
+* Monitorear el recorrido y estado de los lotes de leche a lo largo de la cadena de suministro
 
 ![Cadena de Suministro](./screen/pantalla_cadena.png)
 ![Dashboard Admin](./screen/pantalla_admin.png)
