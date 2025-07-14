@@ -17,3 +17,7 @@ node app.js
 ✅ levanto el servidor web
 cd web 
 npm run dev
+
+git remote add origin https://github.com/codecrypto-academy/majorabe.git
+
+git checkout -b web3-pf-hyperledgerfabric
