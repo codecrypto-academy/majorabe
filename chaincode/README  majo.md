@@ -10,11 +10,11 @@
 ✅ Con el id generado convoco a 
 ./runChaincodeSupplyChain.sh para levarntar el servidro
 
-✅ Levanto el servidor API para acceder a los endpoints
+✅ En una  nueva terminal. Levanto el servidor API para acceder a los endpoints
 cd api
 node app.js
 
-✅ levanto el servidor web
+✅ En una  nueva terminal. levanto el servidor web
 cd web 
 npm run dev
 

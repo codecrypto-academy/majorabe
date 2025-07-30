@@ -2,7 +2,7 @@
 set -e
 
 # ————————————————
-export CORE_CHAINCODE_ID_NAME="supplychain_1.0:4823c9f5696dc6899044d71616d053d5176f2b2c5f0457e755a718166740668b"
+export CORE_CHAINCODE_ID_NAME="supplychain_1.0:64b889f25cdad9b75a1bd193448f75baccfabffb45ca0e3ae83e44bee86b7b3f"
 export CORE_CHAINCODE_SERVER_ADDRESS="0.0.0.0:9998"
 # ————————————————
 

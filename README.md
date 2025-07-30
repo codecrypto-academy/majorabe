@@ -34,12 +34,15 @@ Desde la carpeta fabric-samples/test-network:
 
 ## 2️⃣ Desplegar el grupo de chaincodes bajo el nombre supplychain
 ```
-./network.sh -ccn supplychain -ccp ../asset-transfer-basic/chaincode-typescript -ccl typescript
+./network.sh deployCCAAS -ccn supplychain -ccp ../asset-transfer-basic/chaincode-typescript -ccl typescript
 ```
+
 El despliegue inicia los contenedores necesarios, tal como se observa a continuación:
 ![Contenedores Docker](./screen/pantalla_docker.png)
 
 ## 3️⃣ Iniciar el servidor de CCAAS.
+Con el CORE_CHAINCODE_ID_NAME generado, actualizo y convoco al script runChaincodeSupplyChain
+
 ```
 cd chaincode
 ./runChaincodeSupplyChain.sh
@@ -66,6 +69,7 @@ node importAdmin.cjs
 ✅ Resultado esperado:
 Identidad Admin importada en wallet
 
+
 ## 🚀 Iniciar backend y frontend
 ### Backend (API): 
 ```
@@ -90,3 +94,6 @@ Desde la sesión del administrador es posible:
 
 ![Cadena de Suministro](./screen/pantalla_cadena.png)
 ![Dashboard Admin](./screen/pantalla_admin.png)
+![Lote de leche creado](./screen/pantalla_crearlote.png)
+![Lote de leche asignado](./screen/pantalla_lotedelecheasignado.png)
+![Dashboard Transp](./screen/pantalla_transportista.png)
